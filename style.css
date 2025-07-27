@@ -1,0 +1,74 @@
+body {
+  background-image: url('bg.jpg'); /* Use your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.board {
+  background-color: rgba(255, 255, 255, 0.85); /* light semi-transparent white */
+  padding: 20px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 2px solid #333;
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+button, #status, #scoreboard {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 10px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+body.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark .cell {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #eee;
+}
+
+@media screen and (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+  }
+}
